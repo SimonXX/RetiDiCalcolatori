@@ -5,6 +5,7 @@ import java.net.UnknownHostException;
 
 public class Main1 {
 
+	//Lookup di indirizzi locali e remoti
 	public static void main(String[] args) throws UnknownHostException {
 
 		printLocalAddress();

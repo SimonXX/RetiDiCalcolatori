@@ -7,18 +7,18 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class Main3 {
+
+  //DOWNLOAD DI UNA PAGINA HTML CON JAVA
   public static void main(String[] args) {
     try {
 
       //connessione tramite socket al server web di Google sulla porta 80 (la porta standard per le richieste HTTP)
       Socket s = new Socket("google.com",80);
 
-      //Creazione di un oggetto PrintWrite al fine di
       // scrivere dati nella connessione di output del socket
       PrintWriter out = new PrintWriter (s.getOutputStream(),true);
 
-      //Creazione di un oggetto BufferedReader al fine
-      // di leggere i dati di input dalla connessione di input del socket
+      //leggere i dati di input dalla connessione di input del socket
       BufferedReader in = 
          new BufferedReader (new InputStreamReader(s.getInputStream()));
 
@@ -28,8 +28,7 @@ public class Main3 {
       out.println ();
       boolean more = true;
 
-      //si leggono le risposte del server web linea per linea utilizzando il metodo readLine () dell'oggetto BufferedReader, f
-      //fino a quando non ci sono più dati disponibili.
+      //si leggono le risposte del server web
       while (more) {
          String line = in.readLine();
          if (line == null) more = false;
