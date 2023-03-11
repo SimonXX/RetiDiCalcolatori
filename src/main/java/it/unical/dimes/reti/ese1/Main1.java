@@ -6,6 +6,7 @@ import java.net.UnknownHostException;
 public class Main1 {
 
 	public static void main(String[] args) throws UnknownHostException {
+
 		printLocalAddress();
 		System.out.println("--------");
 		printRemoteAddress("www.dimes.unical.it");
